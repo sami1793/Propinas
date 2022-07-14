@@ -45,7 +45,29 @@
             android:layout_height="wrap_content"
             android:text="OK (15%)"/>
     </RadioGroup>
+    <Switch
+        android:id="@+id/switch_redondeo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="¿Quiere redondear la propina?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/opciones_propina"
+        app:layout_constraintTop_toBottomOf="@id/opciones_propina"/>
+    <Button
+        android:id="@+id/boton_calcular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/switch_redondeo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-
-
+    <TextView
+        android:id="@+id/resultado_propina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/boton_calcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Monto de la propina"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
