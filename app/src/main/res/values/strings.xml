@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">propinas</string>
+    <string name="pregunta_servicio">¿Qué tal estuvo el servicio?</string>
+    <string name="asombrosa_20">Asombrosa (20%)</string>
+    <string name="buena_18">Buena (18%)</string>
+    <string name="ok_15">OK (15%)</string>
+    <string name="calcular">Calcular</string>
+    <string name="monto_propina">Monto de la propina: %s</string>
 </resources>
