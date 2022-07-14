@@ -17,7 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     fun calcularPropina() {
         val stringEnCampoTexto = binding.costoDeServicio.text.toString()
-        val costo = stringEnCampoTexto.toDouble()
+        //Por si se ingresa un valor nulo no falle
+        val costo = stringEnCampoTexto.toDoubleOrNull()
+        if (costo == null) {
+            binding.resultadoPropina.text=""
+            return
+        }
         val selectedID = binding.opcionesPropina.checkedRadioButtonId
 
         val porcentajePropina = when (selectedID) {
