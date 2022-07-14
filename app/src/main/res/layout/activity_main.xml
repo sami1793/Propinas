@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/costo_de_servicio"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Costo de Servicio"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/costo_de_servicio"
+        android:text="¿Qué tal estuvo el servicio?"
+        android:id="@+id/pregunta_servicio"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/opciones_propina"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pregunta_servicio"
+        android:checkedButton="@id/opcion_veinte_porciento">
+        <RadioButton
+            android:id="@+id/opcion_veinte_porciento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asombrosa (20%)"/>
+        <RadioButton
+            android:id="@+id/opcion_dieciocho_porciento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buena (18%)"/>
+        <RadioButton
+            android:id="@+id/opcion_quince_porciento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK (15%)"/>
+    </RadioGroup>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
