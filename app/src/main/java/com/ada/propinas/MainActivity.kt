@@ -7,7 +7,7 @@ import java.text.NumberFormat
 import kotlin.math.ceil
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding.botonCalcular.setOnClickListener { calcularPropina() }
     }
 
-    fun calcularPropina() {
+    private fun calcularPropina() {
         val stringEnCampoTexto = binding.costoDeServicio.text.toString()
         //Por si se ingresa un valor nulo no falle
         val costo = stringEnCampoTexto.toDoubleOrNull()
@@ -23,9 +23,8 @@ class MainActivity : AppCompatActivity() {
             binding.resultadoPropina.text=""
             return
         }
-        val selectedID = binding.opcionesPropina.checkedRadioButtonId
 
-        val porcentajePropina = when (selectedID) {
+        val porcentajePropina = when (binding.opcionesPropina.checkedRadioButtonId) {
             R.id.opcion_quince_porciento -> 0.15
             R.id.opcion_dieciocho_porciento -> 0.18
             else -> 0.20
